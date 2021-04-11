@@ -73,8 +73,8 @@ export const Signup = () => {
       <form className="login-form">
         <input 
           className="input newuser"
-          type="text"
-          placeholder="Create Username"
+          type="email"
+          placeholder="Enter Email"
           onChange={e => setUsername(e.target.value)}
         />
         

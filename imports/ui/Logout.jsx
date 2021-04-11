@@ -3,7 +3,7 @@ import React, { useState } from 'react';
 export const Logout = () => {
     const submit = e => {
         e.preventDefault();
-        localStorage.userId="";
+        localStorage.username="";
         history.back();
     }
     return(

@@ -32,7 +32,7 @@ export const Login = () => {
       result.forEach(element => {
         if(element[1].username === loginusername && element[1].password === loginpassword){
           f=1;
-          localStorage.setItem("userId",element[1]._id);
+          localStorage.setItem("username",element[1].username);
           history.push('/feed');
           console.log(location);
           

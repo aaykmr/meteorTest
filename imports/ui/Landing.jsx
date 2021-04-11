@@ -6,7 +6,7 @@ import { Signup } from './Signup.jsx';
 export const Landing = () => {
 
   //const user = useTracker(() => Meteor.user());
-  localStorage.userId="";
+  localStorage.username="";
   return(
       <div>
         <h1 className="header">zipBoard</h1>

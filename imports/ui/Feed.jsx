@@ -7,7 +7,7 @@ export const Feed = () => {
   const history = useHistory();
   const location = useLocation();
   
-  if(localStorage.userId===""){
+  if(localStorage.username===""){
       //document.getElementsByClassName("header")[0].innerHTML="Please Login";
       
       return(

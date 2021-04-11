@@ -13,7 +13,7 @@ export const Create = () => {
     toPost = {
             "post":post,
             "date":date,
-            "userId":localStorage.userId
+            "username":localStorage.username
         }
     
 
@@ -24,7 +24,7 @@ export const Create = () => {
             {
                 post,
                 date,
-                "userId":localStorage.userId
+                "username":localStorage.username
             });
         response=Object.keys(AllPosts.find('collection').collection._docs._map).map((key) => [Number(key), AllPosts.find('collection').collection._docs._map[key]]).sort(GetSortOrder("date"));
         console.log(response);
@@ -46,7 +46,7 @@ export const Create = () => {
             <div className="postBox">
                 {result.map((element) =>(
                     <div className="post">
-                        <div className="userId">{element[1].userId}</div>
+                        <div className="userId">{element[1].username}</div>
                         <div className="postText">{element[1].post}</div>
                          <div className="date">{new Date(element[1].date).toDateString()}</div>
                     
