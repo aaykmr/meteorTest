@@ -5,7 +5,11 @@ import { Logout } from './Logout';
 export const Create = () => {
     const [post, setPost] = useState('');
     const [date, setDate] = useState('');
-    var result = Object.keys(AllPosts.find('collection').collection._docs._map).map((key) => [Number(key), AllPosts.find('collection').collection._docs._map[key]]);
+    var response=Object.keys(AllPosts.find('collection').collection._docs._map).map((key) => [Number(key), AllPosts.find('collection').collection._docs._map[key]]).sort(GetSortOrder("date"));
+    const [result,setResult]=useState(response);
+    //var result = Object.keys(AllPosts.find('collection').collection._docs._map).map((key) => [Number(key), AllPosts.find('collection').collection._docs._map[key]]);
+
+    //result.sort(GetSortOrder("date"));
     toPost = {
             "post":post,
             "date":date,
@@ -22,7 +26,9 @@ export const Create = () => {
                 date,
                 "userId":localStorage.userId
             });
-        
+        response=Object.keys(AllPosts.find('collection').collection._docs._map).map((key) => [Number(key), AllPosts.find('collection').collection._docs._map[key]]).sort(GetSortOrder("date"));
+        console.log(response);
+        setResult(response);
     }
     return(
         <div className="create">
@@ -37,10 +43,18 @@ export const Create = () => {
             </textarea>
             <button className="button postBtn" onClick={submit} type="submit">Post</button>
 
-
-
+            <div className="postBox">
+                {result.map((element) =>(
+                    <div className="post">
+                        <div className="userId">{element[1].userId}</div>
+                        <div className="postText">{element[1].post}</div>
+                         <div className="date">{new Date(element[1].date).toDateString()}</div>
+                    
+                </div>
+                ) )}                
             
-            <Posts />
+            </div>
+
             <Logout />
         </div>
     );
