@@ -57,8 +57,8 @@ export const Login = () => {
       <form className="login-form">
         <input 
           className="input user"
-          type="text"
-          placeholder="Username"
+          type="email"
+          placeholder="Email"
           onChange={e => setLoginUsername(e.target.value)}
         />
         
