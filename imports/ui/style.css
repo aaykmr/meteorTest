@@ -1,0 +1,161 @@
+.header{
+    margin-left: 20px;
+    width: 20%;
+}
+.login{
+    float: left;
+    position: relative;
+    left: 1%;
+    width: 44%;
+    margin-top: 10%;
+    border: 2px solid #f9faf9;
+    border-radius: 10px;
+    padding: 20px;
+    background-color: #2b2b2b;
+    
+}
+.signup{
+    float: right;
+    position: relative;
+    right: 1%;
+    width: 44%;
+    margin-top: 10%;
+    border: 2px solid #f9faf9;
+    border-radius: 10px;
+    padding: 20px;
+    background-color: #2b2b2b;
+}
+.input{
+    float: left;
+    margin: 10px 0px;
+    clear: both;
+    width: 80%;
+    height: 30px;
+    padding-left: 10px;
+    background-color: black;
+    border-radius: 10px;
+    border: #0C0B0B;
+    color: white;
+    
+
+}
+.create{
+    position: relative;
+    float: left;
+    clear: both;
+    width: 100%;
+    height: auto;
+}
+.createInput{
+    position: relative;
+    height: 60px;
+    width: 40%;
+    left:27%;
+    border: 1px solid rgb(114, 111, 111);
+    outline: none;
+    padding: 20px;
+}
+.createInput:focus{
+    border:1px solid rgb(60, 82, 179);
+}
+.postBtn{
+    position: relative;
+    float: left;
+    left:45%;
+    background-color: rgb(60, 82, 179)  !important;
+    outline: none;
+    margin-top: 0px  !important;
+}
+::-webkit-scrollbar{
+    color: #000000;
+}
+.postBox{
+    float: left;
+    clear: both;
+    overflow-y: scroll;
+    height: 600px;
+    width: 70%;
+    border: none;
+    position: relative;
+    left: 12%;
+    margin-top: 20px;
+}
+.post{
+    float: left;
+    clear: both;
+    padding: 10px 10px 0px 10px;
+    width: 95%;
+    left:2%;
+    min-height: 80px;
+    word-wrap: break-word;
+    border: none;
+    border-radius: 10px;
+    background-color: #00679e;
+    position: relative;
+    margin-top: 10px;
+}
+.postText{
+    margin: 10px;
+}
+.date{
+    float: right;
+    position: relative;
+    color:#181818;
+    font-size: 12px;
+}
+.button {
+    float: left;
+    clear: both;
+    background-color: #0C0B0B;
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 13px;
+    margin-top: 24px;
+    
+    border-radius: 8px;
+    cursor: pointer;
+    outline: none;
+ }
+.Logout{
+    float: left;
+    position: relative;
+    clear: both;
+    left:43%;
+    
+}
+.logoutBtn{
+    background-color: #9b5a5a;
+}
+.userId{
+    color:#181818;
+    font-size: 12px;
+}
+
+ @media only screen and (max-width: 1024px) {
+    
+    .login{
+        width: 80%;
+    }
+    .signup{
+        float: left;
+        left:2%;
+        width: 80%;
+    }
+    .createInput{
+        width:90%;
+        left:1%;
+    }
+    .postBox{
+        width: 95%;
+        left: 2%;
+        
+    }
+    .post{
+        width: 90%;
+        margin-right:1px;
+    }
+
+}
