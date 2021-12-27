@@ -1,17 +1,7 @@
-import React from 'react';
+import React from "react";
 
 export const Post = (props) => {
-    
-    
-    
+  console.log(props);
 
-    console.log(props);
-
-    return(
-        <div className="post">
-            This
-            
-        </div>
-    );
-
-}
+  return <div className="post">This</div>;
+};
